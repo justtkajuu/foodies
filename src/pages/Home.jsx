@@ -5,7 +5,6 @@ import { recipecontext } from "../context/RecipeContext";
 
 const Home = () => {
   const navigate = useNavigate();
-
   const { data } = useContext(recipecontext);
 
   // Take first 3 recipes for feature section
@@ -45,18 +44,20 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ================= FEATURES ================= */}
-      <section className="px-6 md:px-20 py-20">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          Featured Recipes
-        </h2>
+      {/* ================= FEATURED RECIPES (Conditional) ================= */}
+      {featuredRecipes.length > 0 && (
+        <section className="px-6 md:px-20 py-20">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Featured Recipes
+          </h2>
 
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredRecipes.map((recipe) => (
-            <RecipeCard key={recipe.id} recipe={recipe} />
-          ))}
-        </div>
-      </section>
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredRecipes.map((recipe) => (
+              <RecipeCard key={recipe.id} recipe={recipe} />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* ================= FEATURES ================= */}
       <section className="px-6 md:px-20 py-20 ">
@@ -129,29 +130,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ================= NEWSLETTER ================= */}
-      {/* <section className="px-6 md:px-20 py-16 bg-red-500 text-white text-center">
-        <h2 className="text-3xl font-bold mb-3">
-          Join Our Cooking Community
-        </h2>
-        <p className="mb-6 text-red-100">
-          Get weekly recipes and exclusive cooking tips.
-        </p>
-
-        <div className="flex justify-center gap-3 flex-wrap">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="px-4 py-3 rounded-lg text-gray-800 w-64"
-          />
-          <button className="bg-white text-red-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">
-            Subscribe
-          </button>
-        </div>
-      </section> */}
-
-      
-      
     </div>
   );
 };
