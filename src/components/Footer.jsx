@@ -15,13 +15,13 @@ const Footer = () => {
         </p>
 
         {/* Navigation */}
-        <div className="flex flex-wrap justify-center gap-6 mt-6 text-sm font-medium text-gray-700">
-          <a href="/" className="hover:text-red-500">Home</a>
-          <a href="/recipes" className="hover:text-red-500">Recipes</a>
-          <a href="/create-recipe" className="hover:text-red-500">Create</a>
-          <a href="/fav" className="hover:text-red-500">Favourites</a>
-          <a href="/about" className="hover:text-red-500">About</a>
-        </div>
+    <div className="flex flex-wrap justify-center gap-6 mt-6 text-sm font-medium text-gray-700">
+      <a href="/" className="hover:text-red-500">Home</a>
+      <a href="/recipes" className="hover:text-red-500">Recipes</a>
+      <a href="/create-recipe" className="hover:text-red-500">Create</a>
+      <a href="/fav" className="hover:text-red-500">Favourites</a>
+      <a href="/about" className="hover:text-red-500">About</a>
+    </div>
 
         {/* Divider */}
         <div className="mt-8 border-t"></div>
