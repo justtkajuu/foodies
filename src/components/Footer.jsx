@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -15,23 +16,20 @@ const Footer = () => {
         </p>
 
         {/* Navigation */}
-    <div className="flex flex-wrap justify-center gap-6 mt-6 text-sm font-medium text-gray-700">
-      <a href="/" className="hover:text-red-500">Home</a>
-      <a href="/recipes" className="hover:text-red-500">Recipes</a>
-      <a href="/create-recipe" className="hover:text-red-500">Create</a>
-      <a href="/fav" className="hover:text-red-500">Favourites</a>
-      <a href="/about" className="hover:text-red-500">About</a>
-    </div>
+        <div className="flex flex-wrap justify-center gap-6 mt-6 text-sm font-medium text-gray-700">
+          <Link to="/" className="hover:text-red-500">Home</Link>
+          <Link to="/recipes" className="hover:text-red-500">Recipes</Link>
+          <Link to="/create-recipe" className="hover:text-red-500">Create</Link>
+          <Link to="/fav" className="hover:text-red-500">Favourites</Link>
+          <Link to="/about" className="hover:text-red-500">About</Link>
+        </div>
 
         {/* Divider */}
         <div className="mt-8 border-t"></div>
 
         {/* Copyright */}
         <p className="mt-4 text-sm text-gray-500">
-          © {new Date().getFullYear()} Foodies · Built with ❤️ by{" "}
-          <span className="font-semibold text-gray-700">
-            Kajal Golghate
-          </span>
+          © {new Date().getFullYear()} Foodies. Made with ❤️ by Kajal Golghate
         </p>
 
       </div>
