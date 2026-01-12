@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="flex flex-wrap justify-center gap-6 mt-6 text-sm font-medium text-gray-700">
           <Link to="/" className="hover:text-red-500">Home</Link>
           <Link to="/recipes" className="hover:text-red-500">Recipes</Link>
-          <Link to="/create-recipe" className="hover:text-red-500">Create</Link>
+          <Link to="/create-recipe" className="hover:text-red-500">Create Recipe</Link>
           <Link to="/fav" className="hover:text-red-500">Favourites</Link>
           <Link to="/about" className="hover:text-red-500">About</Link>
         </div>
