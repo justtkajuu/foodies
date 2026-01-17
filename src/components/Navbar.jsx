@@ -72,7 +72,7 @@ const Navbar = () => {
         </div>
 
         {/* Menu Links */}
-        <div className="flex flex-col items-center justify-center gap-8 mt-20 font-gilroy">
+        <div className="flex flex-col items-center justify-center gap-8 mt-20 font-semibold font-gilroy">
           <NavLink onClick={() => setOpen(false)} to="/" className={navLinkClass}>
             Home
           </NavLink>
