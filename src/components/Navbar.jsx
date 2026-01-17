@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const navLinkClass = ({ isActive }) =>
-    `text-2xl transition ${
+    `text-xl  transition ${
       isActive ? "text-red-500 font-semibold" : "text-gray-700"
     }`;
 
@@ -15,8 +15,9 @@ const Navbar = () => {
       {/* 🔹 Navbar */}
       <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm px-4 sm:px-6 md:px-20">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex items-center gap-3">
+
+          {/* Logo + Brand (Clickable) */}
+          <Link to="/" className="flex items-center gap-3">
             <img
               src="/logo.png"
               alt="Foodies Logo"
@@ -25,7 +26,7 @@ const Navbar = () => {
             <h1 className="text-2xl font-bold text-red-500 font-gilroy">
               Foodies
             </h1>
-          </div>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-10 text-lg font-gilroy">
@@ -56,7 +57,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* 🔹 FULL SCREEN MOBILE MENU */}
+      {/* 🔹 Full Screen Mobile Menu */}
       <div
         className={`fixed inset-0 z-[999] bg-[#FFF5F0] transform transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"
@@ -72,18 +73,10 @@ const Navbar = () => {
 
         {/* Menu Links */}
         <div className="flex flex-col items-center justify-center gap-8 mt-20 font-gilroy">
-          <NavLink
-            onClick={() => setOpen(false)}
-            to="/"
-            className={navLinkClass}
-          >
+          <NavLink onClick={() => setOpen(false)} to="/" className={navLinkClass}>
             Home
           </NavLink>
-          <NavLink
-            onClick={() => setOpen(false)}
-            to="/recipes"
-            className={navLinkClass}
-          >
+          <NavLink onClick={() => setOpen(false)} to="/recipes" className={navLinkClass}>
             Recipes
           </NavLink>
           <NavLink
@@ -93,18 +86,10 @@ const Navbar = () => {
           >
             Create Recipe
           </NavLink>
-          <NavLink
-            onClick={() => setOpen(false)}
-            to="/fav"
-            className={navLinkClass}
-          >
+          <NavLink onClick={() => setOpen(false)} to="/fav" className={navLinkClass}>
             Favourites
           </NavLink>
-          <NavLink
-            onClick={() => setOpen(false)}
-            to="/about"
-            className={navLinkClass}
-          >
+          <NavLink onClick={() => setOpen(false)} to="/about" className={navLinkClass}>
             About
           </NavLink>
         </div>
